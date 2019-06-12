@@ -6,11 +6,12 @@ export default class CartItem extends Component {
         name: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
         id: PropTypes.number.isRequired,
+        quantity: PropTypes.number.isRequired,
         onPlusClick: PropTypes.func.isRequired
       }
     render() {
       return(
-          <li id={this.props.id}>{this.props.name} {this.props.price} EUR<button onClick={this.props.onPlusClick} type='button'>+</button></li>
+          <li id={this.props.id}>{this.props.name} {this.props.price} EUR, quantity: {this.props.quantity}<button onClick={this.props.onPlusClick} type='button'>+</button></li>
       )
     }
 }
